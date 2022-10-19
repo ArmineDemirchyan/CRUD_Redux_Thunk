@@ -1,31 +1,17 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './components/Login'
-import Menu from './components/Menu'
-import Henrik from './pages/Henrik/Henrik'
-import Nairi from './pages/Nairi/Nairi'
-import Narek from './pages/Narek/Narek'
-import Armine from './pages/Armine/index'
-import Nelly from './pages/Nelly/Nelly'
-import AllUser from './pages/Armine/components/AllUser'
-import AddUser from './pages/Armine/components/AddUser'
-import EditUser from './pages/Armine/components/EditUser'
+import  Home from './pages/Home.js';
+import {Route, Routes} from "react-router-dom";
+import AddUser from './pages/AddUser';
+import EditUser from './pages/EditUser.js';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className='App'>
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/menu' element={<Menu />} />
-        <Route path='/henrik' element={<Henrik />} />
-        <Route path='/nairi' element={<Nairi />} />
-        <Route path='/narek' element={<Narek />} />
-        <Route path='/armine' element={<Armine />} />
-        <Route path='/armine/all' element={<AllUser />} />
-        <Route path='/armine/add' element={<AddUser />} />
-        <Route path='/armine/edit/:id' element={<EditUser />} />
-        <Route path='/nelly' element={<Nelly />} />
+        <Route exact path="/" element={<Home/>}></Route>
+        <Route exact path="/add" element={<AddUser/>}></Route>
+        <Route exact path="/edit/:id" element={<EditUser/>}></Route>
       </Routes>
-    </BrowserRouter>
+    </div>
   );
 }
 export default App;

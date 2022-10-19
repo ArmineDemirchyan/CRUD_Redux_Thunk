@@ -1,9 +1,8 @@
-import { AppBar, Toolbar, styled } from '@mui/material';
+import { AppBar, Toolbar, styled, Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-import {FaBackspace} from '@react-icons/all-files/fa/FaBackspace'
 
 const Header = styled(AppBar)`
-    background: #000;
+    background: #000066;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -19,12 +18,9 @@ const Tabs = styled(NavLink)`
 const NavBar = () => {
     return (
         <Header position='static'>
-            <Toolbar>
-            
-            <Tabs to='/menu'><FaBackspace style={{marginTop:"5px"}}/></Tabs>
-                <Tabs to='/armine'>Armine's CRUD</Tabs>
-                <Tabs to='/armine/all'>All Users</Tabs>
-                <Tabs to='/armine/add'>Add Users</Tabs>
+            <Toolbar>    
+                <Tabs to='/armine'>Admin CRUD</Tabs>
+                <Button variant="contained" color="success"><Tabs to='/add'>Add user</Tabs></Button>
             </Toolbar>
         </Header>
     )
