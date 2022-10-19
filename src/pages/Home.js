@@ -1,7 +1,7 @@
 import { Table, TableHead, TableRow, TableCell, TableBody, Button, styled } from '@mui/material';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteUser, loadUsers } from './redux/actions.js';
+import { deleteUser, loadUsers } from '../redux/actions.js';
 import { Delete, Edit } from '@mui/icons-material';
 import NavBar from "./NavBar"
 import { useNavigate } from 'react-router-dom';
@@ -37,9 +37,6 @@ const Home = () => {
     if(window.confirm("Are you sure you wanted to delete this user?")){
       dispatch(deleteUser(id))
     }
-  }
-  const handleChangeUserData = (id) => {
-
   }
 
   return (

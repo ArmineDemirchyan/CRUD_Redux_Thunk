@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { TextField, Button } from '@mui/material';
 import { useNavigate} from "react-router-dom"
 import { useDispatch } from 'react-redux';
-import { addUser } from './redux/actions';
+import { addUser } from '../redux/actions';
  
 const initialValues = {
     name: '',

@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Header = styled(AppBar)`
     background: #000066;
     height: 80px;
+    width:100%;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem calc((100vw - 1000px) / 2);
